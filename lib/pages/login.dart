@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -9,94 +10,148 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Color(0xFF2C3E50),
+      // CONTINUE AS GUEST BUTTON
+      appBar: PreferredSize(
+        preferredSize:
+            Size.fromHeight(kToolbarHeight + 10), // Increase the height
+        child: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 40.0),
+              child: GestureDetector(
+                onTap: () {
+                  // Add logic for "Continue as Guest"
+                  Navigator.pushNamed(context, '/homepage');
+                },
+                child: Transform.translate(
+                  offset: Offset(0, 10), // Move button slightly down
+                  child: Text(
+                    'Continue as Guest',
+                    style: TextStyle(
+                      color: Color(0xFFA9ABAD),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+
+      // BODY
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // ICONS
-              Image.asset(
-                'assets/images/splash.png',
-                width: 100,
-                height: 100,
-              ),
-              SizedBox(height: 32),
-
-              // WELCOME TITLE
-              Text(
-                'NAMA APP',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
+              // CAUTION PICK
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Caution',
+                      style: TextStyle(
+                        color: Color(0xFFFF4B4B),
+                        fontFamily: GoogleFonts.interTight().fontFamily,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'Pick',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: GoogleFonts.interTight().fontFamily,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              SizedBox(height: 32),
+
+              // CAUTION IN EVERY CART
+              Text(
+                'Caution in every cart',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: GoogleFonts.interTight().fontFamily,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(height: 56),
 
               // EMAIL TEXTFIELD
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(10.0)),
+                      color: Color(0xFF364C61),
+                      border: Border.all(color: Color(0xFF364C61)),
+                      borderRadius: BorderRadius.circular(8.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Email',
+                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         border: InputBorder.none,
                       ),
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 8),
 
               // PASSWORD TEXTFIELD
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(10.0)),
+                      color: Color(0xFF364C61),
+                      border: Border.all(color: Color(0xFF364C61)),
+                      borderRadius: BorderRadius.circular(8.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
                         hintText: 'Password',
+                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         border: InputBorder.none,
                       ),
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 4),
+              SizedBox(height: 12),
 
               // FORGOT PASSWORD
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 55.0),
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: GestureDetector(
                   onTap: () {
                     // Add navigation logic here
                     // Navigator.pushNamed(context, '/register');
                   },
                   child: Align(
-                    alignment: Alignment.centerLeft,
+                    alignment: Alignment.centerRight,
                     child: Text(
                       'Forgot Password?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue,
+                        color: Color(0xFFA9ABAD),
                       ),
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 12),
 
               // SIGN IN BUTTON
               GestureDetector(
@@ -107,14 +162,14 @@ class Login extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
                   child: Container(
-                    padding: EdgeInsets.all(14),
+                    padding: EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: Colors.deepPurpleAccent,
-                      borderRadius: BorderRadius.circular(10.0),
+                      color: Color(0xFFFF4B4B),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Center(
                       child: Text(
-                        'Sign In',
+                        'Login',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
@@ -124,6 +179,34 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(height: 16),
+
+              // NOT A MEMBER? REGISTER NOW
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Dont\'t have an account?',
+                    style: TextStyle(
+                      color: Color(0xFFA9ABAD),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      // Add navigation logic here
+                      Navigator.pushNamed(context, '/register');
+                    },
+                    child: Text(
+                      ' Sign Up',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFFFF4B4B),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 16),
 
@@ -141,14 +224,16 @@ class Login extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 8),
                     child: Text(
                       'OR',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Color(0xFFA9ABAD),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   Expanded(
                     child: Divider(
                       height: 1,
-                      color: Colors.grey,
+                      color: Color(0xFFA9ABAD),
                     ),
                   ),
                 ],
@@ -167,7 +252,7 @@ class Login extends StatelessWidget {
                     padding: EdgeInsets.all(14),
                     decoration: BoxDecoration(
                       color: Colors.black,
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -205,7 +290,7 @@ class Login extends StatelessWidget {
                     padding: EdgeInsets.all(14),
                     decoration: BoxDecoration(
                       color: Colors.blue[900],
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -231,32 +316,6 @@ class Login extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 16),
-
-              // NOT A MEMBER? REGISTER NOW
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Not a member?',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      // Add navigation logic here
-                      Navigator.pushNamed(context, '/register');
-                    },
-                    child: Text(
-                      ' Register Now',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),

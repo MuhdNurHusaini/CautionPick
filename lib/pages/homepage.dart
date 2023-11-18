@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF2C3E50),
         automaticallyImplyLeading: false,
         title: Row(
           children: [
@@ -44,8 +45,8 @@ class HomePage extends StatelessWidget {
 
       //Body
       body: Center(
-        // UI
-      ),
+          // UI
+          ),
 
       //Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
@@ -73,4 +74,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
