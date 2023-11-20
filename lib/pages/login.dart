@@ -96,7 +96,7 @@ class Login extends StatelessWidget {
                       border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(8.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Email',
@@ -118,7 +118,7 @@ class Login extends StatelessWidget {
                       border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(8.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
