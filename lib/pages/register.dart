@@ -9,32 +9,47 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF2C3E50),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF2C3E50),
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // ICONS
-              Image.asset(
-                'assets/images/splash.png',
-                width: 100,
-                height: 100,
-              ),
-              SizedBox(height: 40),
 
               // WELCOME TITLE
-              Text(
-                'Let\'s Get Started',
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Caution',
+                      style: TextStyle(
+                        color: Color(0xFFFF4B4B),
+                        fontFamily: 'Gotag',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'Pick',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Gotag',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(height: 10),
+
               Text(
                 'Create an account to get all features',
                 style: TextStyle(
                   fontSize: 15,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 40),
@@ -44,13 +59,14 @@ class Register extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
+                      color: Color(0xFF364C61),
+                      border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: TextField(
                       decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         hintText: 'Email',
                         border: InputBorder.none,
                       ),
@@ -58,21 +74,22 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 8),
 
               // PASSWORD TEXTFIELD
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
+                      color: Color(0xFF364C61),
+                      border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         hintText: 'Password',
                         border: InputBorder.none,
                       ),
@@ -80,20 +97,21 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 8),
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
+                      color: Color(0xFF364C61),
+                      border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         hintText: 'Confirm Password',
                         border: InputBorder.none,
                       ),
@@ -101,7 +119,7 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 24),
 
               // SIGN IN BUTTON
               GestureDetector(
@@ -114,7 +132,7 @@ class Register extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: Colors.deepPurpleAccent,
+                      color: Color(0xFFFF4B4B),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Center(
