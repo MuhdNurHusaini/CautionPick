@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
                       text: 'Caution',
                       style: TextStyle(
                         color: Color(0xFFFF4B4B),
-                        fontFamily: GoogleFonts.interTight().fontFamily,
+                        fontFamily: 'Gotag',
                         fontWeight: FontWeight.bold,
                         fontSize: 40,
                       ),
@@ -65,7 +65,7 @@ class Login extends StatelessWidget {
                       text: 'Pick',
                       style: TextStyle(
                         color: Colors.white,
-                        fontFamily: GoogleFonts.interTight().fontFamily,
+                        fontFamily: 'Gotag',
                         fontWeight: FontWeight.bold,
                         fontSize: 40,
                       ),
@@ -79,7 +79,7 @@ class Login extends StatelessWidget {
                 'Caution in every cart',
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: GoogleFonts.interTight().fontFamily,
+                  fontFamily: 'Gotag',
                   fontWeight: FontWeight.normal,
                   fontSize: 16,
                 ),
@@ -211,32 +211,35 @@ class Login extends StatelessWidget {
               SizedBox(height: 16),
 
               // 'OR' TEXT WITH HORIZONTAL LINE (Using Container)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: Divider(
-                      height: 1,
-                      color: Colors.grey,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        height: 1,
+                        color: Colors.grey,
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8),
-                    child: Text(
-                      'OR',
-                      style: TextStyle(
-                          color: Color(0xFFA9ABAD),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8),
+                      child: Text(
+                        'OR',
+                        style: TextStyle(
+                            color: Color(0xFFA9ABAD),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Divider(
-                      height: 1,
-                      color: Color(0xFFA9ABAD),
+                    Expanded(
+                      child: Divider(
+                        height: 1,
+                        color: Color(0xFFA9ABAD),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(height: 16),
 
@@ -315,7 +318,6 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
             ],
           ),
         ),

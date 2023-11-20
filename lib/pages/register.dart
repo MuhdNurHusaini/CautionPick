@@ -8,7 +8,7 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Color(0xFF2C3E50),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -25,7 +25,10 @@ class Register extends StatelessWidget {
               // WELCOME TITLE
               Text(
                 'Let\'s Get Started',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
               SizedBox(height: 10),
               Text(
