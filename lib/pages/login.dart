@@ -16,6 +16,7 @@ class Login extends StatelessWidget {
         preferredSize:
             Size.fromHeight(kToolbarHeight + 10), // Increase the height
         child: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [
@@ -84,7 +85,7 @@ class Login extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 56),
+              SizedBox(height: 40),
 
               // EMAIL TEXTFIELD
               Padding(
@@ -153,7 +154,7 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 12),
 
-              // SIGN IN BUTTON
+              // LOGIN BUTTON
               GestureDetector(
                 onTap: () {
                   // Add navigation logic here
