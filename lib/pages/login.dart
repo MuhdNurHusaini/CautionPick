@@ -96,9 +96,13 @@ class Login extends StatelessWidget {
                       border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(8.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: TextField(
                       decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.email, // Replace with your desired icon
+                          color: Colors.white,
+                        ),
                         hintText: 'Email',
                         hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         border: InputBorder.none,
@@ -118,10 +122,14 @@ class Login extends StatelessWidget {
                       border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(8.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.key_off, // Replace with your desired icon
+                          color: Colors.white,
+                        ),
                         hintText: 'Password',
                         hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         border: InputBorder.none,
@@ -158,7 +166,7 @@ class Login extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   // Add navigation logic here
-                  Navigator.pushNamed(context, '/homepage');
+                  Navigator.pushNamed(context, '/mfa');
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),

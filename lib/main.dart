@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:pc_tech/pages/MFA.dart';
 import 'package:pc_tech/pages/homepage.dart';
 import 'package:pc_tech/pages/login.dart';
 import 'package:pc_tech/pages/register.dart';
@@ -22,9 +23,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/', // Set the initial route
       routes: {
-         '/homepage': (context) => HomePage(),
-         '/login':(context) => Login(), // Map '/' to HomePage widget
-         '/register': (context) => Register(), // Map '/' to Register widget
+        '/homepage': (context) => HomePage(),
+        '/login': (context) => Login(), // Map '/' to HomePage widget
+        '/register': (context) => Register(), // Map '/' to Register widget
+        '/mfa': (context) => MFA() // Map to MFA widget
         // Add more routes as needed
       },
     );

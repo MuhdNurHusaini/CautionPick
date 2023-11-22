@@ -63,11 +63,42 @@ class Register extends StatelessWidget {
                       border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 1.0),
                     child: TextField(
                       decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.email, // Replace with your desired icon
+                          color: Colors.white,
+                        ),
                         hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         hintText: 'Email',
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+
+              // EMAIL TEXTFIELD
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xFF364C61),
+                      border: Border.all(color: Color(0xFF364C61)),
+                      borderRadius: BorderRadius.circular(10.0)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 1.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons
+                              .smartphone_outlined, // Replace with your desired icon
+                          color: Colors.white,
+                        ),
+                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
+                        hintText: 'Phone number',
                         border: InputBorder.none,
                       ),
                     ),
@@ -85,10 +116,14 @@ class Register extends StatelessWidget {
                       border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 1.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.key, // Replace with your desired icon
+                          color: Colors.white,
+                        ),
                         hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         hintText: 'Password',
                         border: InputBorder.none,
@@ -107,10 +142,14 @@ class Register extends StatelessWidget {
                       border: Border.all(color: Color(0xFF364C61)),
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 1.0),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.key_off, // Replace with your desired icon
+                          color: Colors.white,
+                        ),
                         hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
                         hintText: 'Confirm Password',
                         border: InputBorder.none,
