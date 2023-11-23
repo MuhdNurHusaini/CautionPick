@@ -56,7 +56,7 @@ class MFA extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   // Add navigation logic here
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.pushNamed(context, '/homepage');
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
