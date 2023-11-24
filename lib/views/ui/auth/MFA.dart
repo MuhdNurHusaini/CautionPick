@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
-import 'package:pinput/pinput.dart';
+import 'package:pc_tech/views/widgets/buttons/verify_button.dart';
+import 'package:pc_tech/views/widgets/form/pininput_widget.dart';
 
 class MFA extends StatelessWidget {
   const MFA({super.key});
@@ -48,49 +49,11 @@ class MFA extends StatelessWidget {
               SizedBox(height: 36),
 
               // PIN INPUT BOX
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Pinput(
-                    defaultPinTheme: PinTheme(
-                        width: 49,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF364C61),
-                            borderRadius: BorderRadius.circular(8.0))),
-                    length: 6,
-                  ), // Add your PinInputField here // Add your PinInputField here
-                ],
-              ),
+              PinInput(),
               SizedBox(height: 40), // Adjust spacing if needed
 
               // VERIFY BUTTON
-              GestureDetector(
-                onTap: () {
-                  // Add navigation logic here
-                  Navigator.pushNamed(context, '/homepage');
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Container(
-                    padding: EdgeInsets.all(14),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFFF4B4B),
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Verify account',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              VerifyButton(),
               SizedBox(height: 16),
 
               // RESEND CODE

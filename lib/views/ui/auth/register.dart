@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:pc_tech/widget/email_form.dart';
-import 'package:pc_tech/widget/pass_form.dart';
-import 'package:pc_tech/widget/signup_button.dart';
+import 'package:pc_tech/views/widgets/buttons/signup_button.dart';
+import 'package:pc_tech/views/widgets/form/email_form.dart';
+import 'package:pc_tech/views/widgets/form/pass_form.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key});

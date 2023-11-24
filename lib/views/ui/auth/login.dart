@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pc_tech/widget/email_form.dart';
-import 'package:pc_tech/widget/login_button.dart';
-import 'package:pc_tech/widget/pass_form.dart';
+import 'package:pc_tech/views/widgets/buttons/login_button.dart';
+import 'package:pc_tech/views/widgets/form/email_form.dart';
+import 'package:pc_tech/views/widgets/form/pass_form.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
