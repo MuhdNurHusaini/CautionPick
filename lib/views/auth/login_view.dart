@@ -139,7 +139,7 @@ class LoginView extends StatelessWidget {
               ),
               SizedBox(height: 16),
 
-              // ICON GOOGLE AND FACEBOOK
+              // SSO APPLE & FACEBOOK
               AppleButton(),
               SizedBox(height: 16),
 
