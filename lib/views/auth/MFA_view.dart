@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:pc_tech/views/widgets/buttons/verify_button.dart';
 import 'package:pc_tech/views/widgets/form/pininput_widget.dart';
 
-class MFA extends StatelessWidget {
-  const MFA({super.key});
+class MFAView extends StatelessWidget {
+  const MFAView({super.key});
 
   @override
   Widget build(BuildContext context) {

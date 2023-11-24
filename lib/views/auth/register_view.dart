@@ -5,8 +5,8 @@ import 'package:pc_tech/views/widgets/buttons/signup_button.dart';
 import 'package:pc_tech/views/widgets/form/email_form.dart';
 import 'package:pc_tech/views/widgets/form/pass_form.dart';
 
-class Register extends StatelessWidget {
-  const Register({Key? key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({Key? key});
 
   @override
   Widget build(BuildContext context) {

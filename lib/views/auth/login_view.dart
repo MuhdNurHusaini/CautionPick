@@ -7,8 +7,8 @@ import 'package:pc_tech/views/widgets/form/email_form.dart';
 import 'package:pc_tech/views/widgets/form/pass_form.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key});
+class LoginView extends StatelessWidget {
+  const LoginView({Key? key});
 
   @override
   Widget build(BuildContext context) {
