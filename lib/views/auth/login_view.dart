@@ -1,8 +1,12 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pc_tech/views/widgets/brand.dart';
+import 'package:pc_tech/views/widgets/buttons/appleid_button.dart';
+import 'package:pc_tech/views/widgets/buttons/fb_button.dart';
+import 'package:pc_tech/views/widgets/buttons/guest_button.dart';
 import 'package:pc_tech/views/widgets/buttons/login_button.dart';
+import 'package:pc_tech/views/widgets/buttons/reset_button.dart';
 import 'package:pc_tech/views/widgets/form/email_form.dart';
 import 'package:pc_tech/views/widgets/form/pass_form.dart';
 // import 'package:google_fonts/google_fonts.dart';
@@ -23,25 +27,7 @@ class LoginView extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 40.0),
-              child: GestureDetector(
-                onTap: () {
-                  // Add logic for "Continue as Guest"
-                  Navigator.pushNamed(context, '/homepage');
-                },
-                child: Transform.translate(
-                  offset: Offset(0, 10), // Move button slightly down
-                  child: Text(
-                    'Continue as Guest',
-                    style: TextStyle(
-                      color: Color(0xFFA9ABAD),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            GuestButton(),
           ],
         ),
       ),
@@ -53,30 +39,7 @@ class LoginView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // CAUTION PICK
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Caution',
-                      style: TextStyle(
-                        color: Color(0xFFFF4B4B),
-                        fontFamily: 'Gotag',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                      ),
-                    ),
-                    TextSpan(
-                      text: 'Pick',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Gotag',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              Brand(),
 
               // CAUTION IN EVERY CART
               Text(
@@ -107,22 +70,7 @@ class LoginView extends StatelessWidget {
               // FORGOT PASSWORD
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: GestureDetector(
-                  onTap: () {
-                    // Add navigation logic here
-                    Navigator.pushNamed(context, '/forgotpass');
-                  },
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFFA9ABAD),
-                      ),
-                    ),
-                  ),
-                ),
+                child: ResetButton(),
               ),
               SizedBox(height: 12),
 
@@ -192,80 +140,10 @@ class LoginView extends StatelessWidget {
               SizedBox(height: 16),
 
               // ICON GOOGLE AND FACEBOOK
-              GestureDetector(
-                onTap: () {
-                  // Add navigation logic here
-                  // Navigator.pushNamed(context, '/homepage');
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Container(
-                    padding: EdgeInsets.all(14),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svg/apple.svg',
-                          width: 25,
-                          height: 25,
-                        ),
-                        SizedBox(
-                            width: 10), // Adjust spacing between icon and text
-                        Text(
-                          'Sign in with Apple ID',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              AppleButton(),
               SizedBox(height: 16),
 
-              GestureDetector(
-                onTap: () {
-                  // Add navigation logic here
-                  // Navigator.pushNamed(context, '/homepage');
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Container(
-                    padding: EdgeInsets.all(14),
-                    decoration: BoxDecoration(
-                      color: Colors.blue[900],
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svg/facebook.svg',
-                          width: 24,
-                          height: 24,
-                        ),
-                        SizedBox(
-                            width: 10), // Adjust spacing between icon and text
-                        Text(
-                          'Sign in with Facebook',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              FbButton(),
             ],
           ),
         ),

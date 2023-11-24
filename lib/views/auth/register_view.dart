@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:pc_tech/views/widgets/buttons/signup_button.dart';
+import 'package:pc_tech/views/widgets/brand.dart';
+import 'package:pc_tech/views/widgets/buttons/create_button.dart';
 import 'package:pc_tech/views/widgets/form/email_form.dart';
 import 'package:pc_tech/views/widgets/form/pass_form.dart';
 
@@ -24,30 +25,7 @@ class RegisterView extends StatelessWidget {
               // ICONS
 
               // WELCOME TITLE
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Caution',
-                      style: TextStyle(
-                        color: Color(0xFFFF4B4B),
-                        fontFamily: 'Gotag',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                      ),
-                    ),
-                    TextSpan(
-                      text: 'Pick',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Gotag',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              Brand(),
 
               Text(
                 'Create an account to get all features',
