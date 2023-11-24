@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:pc_tech/views/widgets/brand.dart';
-import 'package:pc_tech/views/widgets/buttons/appleid_button.dart';
+import 'package:pc_tech/views/widgets/buttons/apple_button.dart';
 import 'package:pc_tech/views/widgets/buttons/fb_button.dart';
 import 'package:pc_tech/views/widgets/buttons/guest_button.dart';
 import 'package:pc_tech/views/widgets/buttons/login_button.dart';
