@@ -18,33 +18,6 @@ class MFA extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // WELCOME TITLE
-              // RichText(
-              //   text: TextSpan(
-              //     children: [
-              //       TextSpan(
-              //         text: 'Caution',
-              //         style: TextStyle(
-              //           color: Color(0xFFFF4B4B),
-              //           fontFamily: 'Gotag',
-              //           fontWeight: FontWeight.bold,
-              //           fontSize: 40,
-              //         ),
-              //       ),
-              //       TextSpan(
-              //         text: 'Pick',
-              //         style: TextStyle(
-              //           color: Colors.white,
-              //           fontFamily: 'Gotag',
-              //           fontWeight: FontWeight.bold,
-              //           fontSize: 40,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // SizedBox(height: 32),
-
               Text(
                 'Verification',
                 style: TextStyle(

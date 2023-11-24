@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pc_tech/widget/email_form.dart';
+import 'package:pc_tech/widget/login_button.dart';
+import 'package:pc_tech/widget/pass_form.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
@@ -90,53 +93,14 @@ class Login extends StatelessWidget {
               // EMAIL TEXTFIELD
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Color(0xFF364C61),
-                      border: Border.all(color: Color(0xFF364C61)),
-                      borderRadius: BorderRadius.circular(8.0)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.email, // Replace with your desired icon
-                          color: Colors.white,
-                        ),
-                        hintText: 'Email',
-                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                ),
+                child: EmailForm(),
               ),
               SizedBox(height: 8),
 
               // PASSWORD TEXTFIELD
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Color(0xFF364C61),
-                      border: Border.all(color: Color(0xFF364C61)),
-                      borderRadius: BorderRadius.circular(8.0)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.key_off, // Replace with your desired icon
-                          color: Colors.white,
-                        ),
-                        hintText: 'Password',
-                        hintStyle: TextStyle(color: Color(0xFFA9ABAD)),
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                ),
+                child: PassForm(),
               ),
               SizedBox(height: 12),
 
@@ -163,32 +127,7 @@ class Login extends StatelessWidget {
               SizedBox(height: 12),
 
               // LOGIN BUTTON
-              GestureDetector(
-                onTap: () {
-                  // Add navigation logic here
-                  Navigator.pushNamed(context, '/mfa');
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFFF4B4B),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 19,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              LoginButton(),
               SizedBox(height: 16),
 
               // NOT A MEMBER? REGISTER NOW

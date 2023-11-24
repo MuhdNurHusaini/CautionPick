@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:pc_tech/pages/MFA.dart';
-import 'package:pc_tech/pages/homepage.dart';
-import 'package:pc_tech/pages/login.dart';
-import 'package:pc_tech/pages/register.dart';
-import 'package:pc_tech/utils/forgotpass.dart';
+import 'package:pc_tech/modules/pages/MFA.dart';
+import 'package:pc_tech/modules/home/homepage.dart';
+import 'package:pc_tech/modules/auth/login/login.dart';
+import 'package:pc_tech/modules/auth/register/register.dart';
+import 'package:pc_tech/modules/auth/reset_pass/forgotpass.dart';
 
 void main() {
   runApp(const MyApp());
