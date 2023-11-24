@@ -5,6 +5,7 @@ import 'package:pc_tech/pages/MFA.dart';
 import 'package:pc_tech/pages/homepage.dart';
 import 'package:pc_tech/pages/login.dart';
 import 'package:pc_tech/pages/register.dart';
+import 'package:pc_tech/utils/forgotpass.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         '/homepage': (context) => HomePage(),
         '/login': (context) => Login(), // Map '/' to HomePage widget
         '/register': (context) => Register(), // Map '/' to Register widget
-        '/mfa': (context) => MFA() // Map to MFA widget
+        '/mfa': (context) => MFA(), // Map to MFA widget
+        '/forgotpass': (context) => ForgetPassword() // Map to MFA widget
         // Add more routes as needed
       },
     );

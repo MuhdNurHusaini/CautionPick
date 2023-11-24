@@ -11,6 +11,7 @@ class Register extends StatelessWidget {
       backgroundColor: Color(0xFF2C3E50),
       appBar: AppBar(
         backgroundColor: Color(0xFF2C3E50),
+        automaticallyImplyLeading: false,
       ),
       body: SafeArea(
         child: Center(

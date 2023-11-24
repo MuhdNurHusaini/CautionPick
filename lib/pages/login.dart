@@ -146,7 +146,7 @@ class Login extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     // Add navigation logic here
-                    // Navigator.pushNamed(context, '/register');
+                    Navigator.pushNamed(context, '/forgotpass');
                   },
                   child: Align(
                     alignment: Alignment.centerRight,
@@ -196,7 +196,7 @@ class Login extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Dont\'t have an account?',
+                    'Don\'t have an account?',
                     style: TextStyle(
                       color: Color(0xFFA9ABAD),
                       fontWeight: FontWeight.bold,
